@@ -1,4 +1,4 @@
-package week7_homework;
+package project;
 
 abstract class PairMap{
 	protected String keyArray [];
@@ -19,7 +19,7 @@ class Dictionary extends PairMap{
 		int i = -1;
 		for (i = 0; i < keyArray.length-1; i++) {
 			if (keyArray[i] != null && keyArray[i].equals(key)) {
-                return valueArray[i];  // key를 찾으면 해당 value를 반환
+                return valueArray[i];
             }
 		}
 		return (i == -1)?null:valueArray[i];
@@ -47,13 +47,13 @@ class Dictionary extends PairMap{
 	public String delete(String key) {
         for (int i = 0; i < keyArray.length; i++) {
             if (keyArray[i] != null && keyArray[i].equals(key)) {
-                String oldValue = valueArray[i];  // 삭제할 value 저장
-                keyArray[i] = null;  // key 삭제
-                valueArray[i] = null;  // value 삭제
-                return oldValue;  // 삭제된 value 반환
+                String oldValue = valueArray[i];
+                keyArray[i] = null;
+                valueArray[i] = null;
+                return oldValue;
             }
         }
-        return null;  // key를 찾지 못하면 null 반환
+        return null;
     }
 	
 	public int length() {
@@ -66,11 +66,11 @@ class Dictionary extends PairMap{
 	}
 }
 
-public class test12 {
+public class p12 {
 	public static void main(String[] args) {
 		Dictionary dic = new Dictionary(10);
 		dic.put("황기태", "자바");
-		dic.put("이재문", "파이선");
+		dic.put("이재문", "파이썬");
 		dic.put("이재문", "C++");
 		System.out.println("이재문의 값은 " + dic.get("이재문"));
 		System.out.println("황기태의 값은 " + dic.get("황기태"));
