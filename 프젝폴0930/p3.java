@@ -1,4 +1,4 @@
-package week5_homework;
+package project;
 
 import java.util.Scanner;
 
@@ -27,7 +27,7 @@ class Grade{
 	
 }
 
-public class test3 {
+public class p3 {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("이름, 자바, 웹프로그래밍, 운영체제 순으로 점수 입력>>");
