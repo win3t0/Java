@@ -1,4 +1,4 @@
-package week5_homework;
+package project;
 
 class ArrayUtil{
 	public static int [] concat(int[] a, int[] b) {
