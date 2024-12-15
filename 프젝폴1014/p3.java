@@ -1,4 +1,4 @@
-package week7_homework;
+package project;
 
 class Point{
 	private int x,y;
@@ -44,7 +44,7 @@ class ColorPoint extends Point{
 	}
 }
 
-public class test3 {
+public class p3 {
 	public static void main(String[] args) {
 		ColorPoint cp = new ColorPoint(5,5,"RED");
 		cp.setXY(10,20);
