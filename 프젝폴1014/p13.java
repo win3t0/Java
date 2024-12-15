@@ -1,4 +1,4 @@
-package week7_homework;
+package project;
 
 import java.util.Scanner;
 
@@ -23,10 +23,8 @@ class Add extends Calc{
 	public int calculate() {
 		int result = 0;
 		try {
-            // 예외를 발생시키는 코드 예시
             result = a + b;
         } catch (Exception e) {
-            // 예외 메시지를 문자열로 저장
         	errorMsg = e.getMessage();
         }
 		finally{
@@ -49,10 +47,8 @@ class Sub extends Calc{
 	public int calculate() {
 		int result = 0;
 		try {
-            // 예외를 발생시키는 코드 예시
             result = a - b;
         } catch (Exception e) {
-            // 예외 메시지를 문자열로 저장
         	errorMsg = e.getMessage();
         }
 		finally{
@@ -75,7 +71,6 @@ class Mul extends Calc{
 	public int calculate() {
 		int result = 0;
 		try {
-            // 예외를 발생시키는 코드 예시
             result = a * b;
         } catch (Exception e) {
             // 예외 메시지를 문자열로 저장
@@ -112,7 +107,7 @@ class Div extends Calc{
 	}
 }
 
-public class test13 {
+public class p13 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		while (true) {
