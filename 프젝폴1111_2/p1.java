@@ -1,14 +1,13 @@
-package chapter8;
+package project;
 
 import java.io.*;
 import java.util.Scanner;
 
-public class test1 {
+public class p1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         File dir = new File("c:\\temp");
         
-        // 디렉토리가 없으면 생성
         if (!dir.exists()) {
             dir.mkdirs();
         }
