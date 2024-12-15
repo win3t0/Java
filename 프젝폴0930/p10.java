@@ -17,7 +17,7 @@ class DayDiary {
     }
 }
 
-public class test10 {
+public class p10 {
     int year;
     int month;
 
