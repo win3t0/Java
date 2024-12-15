@@ -73,7 +73,7 @@ class VArray {
 }
 
 
-public class test14 {
+public class p14 {
 	public static void main(String[] args) {
 		VArray v = new VArray(5);
 		System.out.println("용량: " + v.capacity + ", 저장된 개수: " + v.size());
