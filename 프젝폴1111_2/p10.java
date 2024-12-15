@@ -1,4 +1,4 @@
-package chapter8;
+package project;
 
 import java.io.File;
 import java.util.HashMap;
@@ -6,15 +6,13 @@ import java.util.HashMap;
 import java.io.*;
 import java.util.*;
 
-public class test10 {
-    // 전화번호부를 저장할 맵
+public class p10 {
     private Map<String, String> phoneBook;
 
     public test10() {
         phoneBook = new HashMap<>();
     }
 
-    // 전화번호를 파일에서 로드하는 메소드
     public void loadPhoneNumbers(String filePath) {
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;
@@ -36,7 +34,6 @@ public class test10 {
         }
     }
 
-    // 사용자와의 상호작용을 처리하는 메소드
     public void startSearch() {
         Scanner scanner = new Scanner(System.in);
         while (true) {
@@ -57,9 +54,7 @@ public class test10 {
     public static void main(String[] args) {
         // PhoneSearch 객체 생성
         test10 phoneSearch = new test10();
-        // 전화번호 파일 로드
         phoneSearch.loadPhoneNumbers("C:\\Temp\\phone.txt");
-        // 검색 시작
         phoneSearch.startSearch();
     }
 }
