@@ -1,10 +1,7 @@
-package week7_homework;
+package project;
 
 import java.util.Scanner;
 
-// 추상클래스를 상속 받은 서브클래스는 추상메소드를 반드시 오버라이딩해야한다
-// 이 처럼 일부 형식을 강제할 수 있다
-// 단, 추상클래스는 객체를 만들 수 없음을 조심해야한다
 abstract class Box{
 	protected int size;
 	
@@ -37,10 +34,10 @@ class IngredientBox extends Box{
 	}
 }
 
-public class test8 {
+public class p8 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("*****청춘 커피 자판기 입니다.*****");
+		System.out.println("***청춘 커피 자판기 입니다.***");
 		IngredientBox coffee = new IngredientBox();
 		IngredientBox creamer = new IngredientBox();
 		IngredientBox sugar = new IngredientBox();
