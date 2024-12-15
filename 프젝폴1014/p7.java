@@ -1,4 +1,4 @@
-package week7_homework;
+package project;
 
 class Point3DColor extends Point{
 	private int z;
@@ -34,7 +34,7 @@ class Point3DColor extends Point{
     }
 }
 
-public class test7 {
+public class p7 {
 	public static void main(String[] args) {
 		Point3DColor p = new Point3DColor(10,20,30,"RED");
 		System.out.println(p.toString()+"입니다.");
