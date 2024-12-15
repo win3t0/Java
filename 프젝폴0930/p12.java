@@ -16,7 +16,7 @@ class Dictionary{
 	}
 }
 
-public class test12 {
+public class p12 {
 	public static void main(String[] args) {
 //		Dictionary dic = new Dictionary();
 		Scanner sc = new Scanner(System.in);
