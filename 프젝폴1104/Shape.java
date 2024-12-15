@@ -1,4 +1,4 @@
-package graphic;
+package project;
 
 public class Shape {
 	public void draw() {
