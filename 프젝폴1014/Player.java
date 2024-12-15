@@ -1,4 +1,4 @@
-package week7_homework;
+package project;
 import java.util.Scanner;
 
 abstract public class Player {
