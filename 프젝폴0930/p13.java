@@ -61,7 +61,7 @@ class ConcertReservationSystem {
     }
 }
 
-public class test13 {
+public class p13 {
     public static void main(String[] args) {
         ConcertReservationSystem reservationSystem = new ConcertReservationSystem();
         Scanner sc = new Scanner(System.in);
