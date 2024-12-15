@@ -1,4 +1,4 @@
-package week5_homework;
+package project;
 
 class Rectangle{
 	int x, y, width, height;
@@ -28,7 +28,7 @@ class Rectangle{
 	
 }
 
-public class test6 {
+public class p6 {
 	public static void main(String[] args) {
 		Rectangle a = new Rectangle(3, 3, 6, 6);
 		Rectangle b = new Rectangle(4, 4, 6, 6);
