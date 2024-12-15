@@ -1,4 +1,4 @@
-package week5_homework;
+package project;
 
 import java.util.Scanner;
 
@@ -22,10 +22,10 @@ class Song{
 	
 }
 
-public class test5 {
+public class p5 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("노래제목, 가수이름, 발표년도, 가수나라을 입력해하세요>>");
+		System.out.print("노래 제목, 가수명, 발표 연도, 가수 국적을 입력하세요>>");
 		String title = sc.next();
 		String singer = sc.next();
 		String year = sc.next();
