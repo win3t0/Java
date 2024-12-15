@@ -1,5 +1,4 @@
-package week7_homework;
-//상속받은 Point 클래스는 test3에서 확인
+package project;
 class PositivePoint extends Point{
 	public PositivePoint(int x, int y){
 		super((x < 1) ? 1 : x, (y < 1) ? 1 : y);
@@ -16,7 +15,7 @@ class PositivePoint extends Point{
 	}
 }
 
-public class test6 {
+public class p6 {
 	public static void main(String[] args) {
 		PositivePoint p = new PositivePoint(10,10);
 		p.move(5,5);
