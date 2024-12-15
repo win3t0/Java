@@ -1,4 +1,4 @@
-package week5_homework;
+package project;
 
 import java.util.Scanner;
 
@@ -32,7 +32,7 @@ public class test12 {
 			String answer = Dictionary.kor2Eng(word);
 			
 			if(answer.equals("없음"))
-				System.out.println(word+"는 저의 사전에 없습니다.");
+				System.out.println(word+"는 사전에 존재하지 않습니다.");
 			else
 				System.out.println(word+"은(는) "+answer);
 		}	
