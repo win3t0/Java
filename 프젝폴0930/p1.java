@@ -13,7 +13,7 @@ class TV {
 	}
 	
 }
-public class test1 {
+public class p1 {
 	public static void main(String[] args) {
 		TV tv = new TV("samsung",50,300);
 		tv.showTV();
