@@ -1,4 +1,4 @@
-package chapter14_homework;
+package project;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -7,13 +7,13 @@ import javax.sound.sampled.*;
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
-public class test7 extends JFrame {
+public class p7 extends JFrame {
 	private JFileChooser chooser = null;
 	private Clip clip = null;
 	private AudioInputStream audioStream = null;
 	private JLabel msgLabel = new JLabel("오디오 파일을 선택하세요");
 	
-	public test7() {
+	public p7() {
 		super("오디오 파일을 찾아 연주/종료 제어");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		Container c = getContentPane();
@@ -45,7 +45,7 @@ public class test7 extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				String filePath = chooseFile();
 				if(filePath == null)
-					return; // 파일이 선택되지 않았음
+					return; 
 				
 				if(clip != null && clip.isActive())
 					clip.close();
@@ -68,15 +68,15 @@ public class test7 extends JFrame {
 	}
 	
 	private String chooseFile() {
-		if(chooser == null) // 처음이면, 아니면 이전에 만든 chooser 이용
+		if(chooser == null)
 			chooser= new JFileChooser();
 		
 		FileNameExtensionFilter filter = new FileNameExtensionFilter(
 			        "Audio Files(wav,au, mid, rmf)", "wav", "au", "mid",  "rmf");
 	    chooser.setFileFilter(filter);
-		int ret = chooser.showOpenDialog(test7.this);
+		int ret = chooser.showOpenDialog(p7.this);
 		if(ret != JFileChooser.APPROVE_OPTION) {
-			JOptionPane.showMessageDialog(test7.this, "파일을 선택하지 않았습니다", 
+			JOptionPane.showMessageDialog(p7.this, "파일을 선택하지 않았습니다", 
 						"경고", JOptionPane.WARNING_MESSAGE);
 			return null;
 		}
@@ -86,13 +86,13 @@ public class test7 extends JFrame {
 	
 	private void playAudio(String pathName) {
 		try {
-			File audioFile = new File(pathName); // 오디오 파일의 경로명
-			audioStream = AudioSystem.getAudioInputStream(audioFile); // 오디오 파일로부터
+			File audioFile = new File(pathName);
+			audioStream = AudioSystem.getAudioInputStream(audioFile);
 			
-			clip = AudioSystem.getClip(); // 비어있는 오디오 클립 만들기
+			clip = AudioSystem.getClip();
 			clip.addLineListener(new MyLineListener());
-			clip.open(audioStream); // 재생할 오디오 스트림 열기
-			clip.start(); // 재생 시작
+			clip.open(audioStream);
+			clip.start();
 		}
 		catch (LineUnavailableException e) { e.printStackTrace(); }
 		catch (UnsupportedAudioFileException e) { e.printStackTrace(); }
@@ -102,9 +102,9 @@ public class test7 extends JFrame {
 	class MyLineListener implements LineListener {
 		@Override
 		public void update(LineEvent e) {
-			if (e.getType() == LineEvent.Type.STOP) { // clip.stop()이 호출되거나 재생이 끝났을 때
+			if (e.getType() == LineEvent.Type.STOP) {
 				try {
-					audioStream.close(); // 현재 연주되는 오디오 스트림 닫기
+					audioStream.close();
 					msgLabel.setText("연주를 종료하였습니다.");			
 				} catch (IOException e1) {
 					e1.printStackTrace();		
@@ -113,10 +113,6 @@ public class test7 extends JFrame {
 		}
 	}
 	static public void main(String[] arg) {
-		new test7();
+		new p7();
 	}
-	
-	
 }
-
-
