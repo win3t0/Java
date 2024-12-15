@@ -1,4 +1,4 @@
-package component;
+package project;
 import graphic.Shape;
 
 public class Circle extends Shape{
