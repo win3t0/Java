@@ -1,9 +1,7 @@
-package week7_homework;
+package project;
 
-// 부모 클래스 Point는 test3.java
 class Point3D extends Point{
 	int z;
-	//생성자를 입력할 때 반환식을 입력하지 않는다
 	public Point3D(int x, int y, int z) {
 		super(x, y);
 		this.z = z;
@@ -28,7 +26,7 @@ class Point3D extends Point{
 	}
 }
 
-public class test5 {
+public class p5 {
 	public static void main(String[] args) {
 		Point3D p = new Point3D(3,2,1);
 		System.out.println(p.toString() + "입니다.");
