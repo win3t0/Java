@@ -1,4 +1,4 @@
-package chapter11_homework;
+package project;
 
 import java.awt.*;
 import javax.swing.*;
@@ -7,13 +7,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class test10 extends JFrame {
+public class p10 extends JFrame {
     private List<String> sentences;
     private String currentSentence;
     private StringBuilder playerInput;
     private JLabel feedbackLabel;
 
-    public test10() {
+    public p10() {
         super("단어 조합 게임");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -51,11 +51,11 @@ public class test10 extends JFrame {
         public SouthPanel() {
             setBackground(Color.YELLOW);
             setLayout(new FlowLayout());
-            feedbackLabel = new JLabel(">>"); // 사용자 입력과 성공 메시지를 표시할 라벨
+            feedbackLabel = new JLabel(">>");
             feedbackLabel.setForeground(Color.BLACK);
-            feedbackLabel.setPreferredSize(new Dimension(500, 30)); // 라벨 크기 설정
-            feedbackLabel.setHorizontalAlignment(SwingConstants.LEFT); // 텍스트 정렬
-            feedbackLabel.setVerticalAlignment(SwingConstants.CENTER); // 수직 정렬
+            feedbackLabel.setPreferredSize(new Dimension(500, 30));
+            feedbackLabel.setHorizontalAlignment(SwingConstants.LEFT);
+            feedbackLabel.setVerticalAlignment(SwingConstants.CENTER);
             add(feedbackLabel);
         }
     }
@@ -72,13 +72,13 @@ public class test10 extends JFrame {
             Random rand = new Random();
             for (String word : words) {
                 JLabel label = new JLabel(word);
-                label.setForeground(Color.BLACK); // 기본 텍스트 색상 설정
-                label.setSize(150, 30); // 텍스트 크기와 크기 맞춤
+                label.setForeground(Color.BLACK);
+                label.setSize(150, 30);
                 label.setLocation(rand.nextInt(Math.max(this.getWidth() - 150, 1)) + 10, 
                                   rand.nextInt(Math.max(this.getHeight() - 30, 1)) + 10);
-                label.setHorizontalAlignment(SwingConstants.CENTER); // 텍스트 중앙 정렬
+                label.setHorizontalAlignment(SwingConstants.CENTER);
                 label.addMouseListener(new WordClickListener(word, label));
-                label.setVerticalAlignment(SwingConstants.CENTER); // 수직 정렬
+                label.setVerticalAlignment(SwingConstants.CENTER);
                 this.add(label);
             }
             this.revalidate();
@@ -96,14 +96,14 @@ public class test10 extends JFrame {
         }
 
         public void mouseClicked(MouseEvent e) {
-            if (label.getForeground().equals(Color.GRAY)) return; // 이미 클릭된 경우 무시
+            if (label.getForeground().equals(Color.GRAY)) return;
 
             playerInput.append(word).append(" ");
-            feedbackLabel.setText(">> " + playerInput.toString().trim()); // 공백 제거 후 표시
-            label.setForeground(Color.GRAY); // 클릭된 단어는 회색으로 변경
+            feedbackLabel.setText(">> " + playerInput.toString().trim());
+            label.setForeground(Color.GRAY);
 
             if (playerInput.toString().trim().equals(currentSentence)) {
-                feedbackLabel.setText(">> " + playerInput.toString().trim() + " (성공!)"); // 성공 메시지 추가
+                feedbackLabel.setText(">> " + playerInput.toString().trim() + " (성공!)");
             }
         }
     }
@@ -112,11 +112,11 @@ public class test10 extends JFrame {
         Random rand = new Random();
         currentSentence = sentences.get(rand.nextInt(sentences.size()));
         playerInput.setLength(0);
-        feedbackLabel.setText(">>"); // 초기화
+        feedbackLabel.setText(">>");
         ((CenterPanel) getContentPane().getComponent(1)).placeWords(currentSentence);
     }
 
     public static void main(String[] args) {
-        new test10();
+        new p10();
     }
 }
