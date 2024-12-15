@@ -1,4 +1,4 @@
-package week7_homework;
+package project;
 import java.util.Scanner;
 
 class Game {
@@ -6,28 +6,28 @@ class Game {
     Player owner;
 
     void run() {
-        System.out.println("***** 묵찌빠 게임을 시작합니다. *****");
+        System.out.println("*** 묵찌빠 게임을 시작합니다. ***");
         createPlayers();
-        System.out.println("오너를 결정하기 위해 가위바위보를 시작합니다.");
+        System.out.println("메인을 결정하기 위해 가위바위보를 시작합니다.");
 
-        // 가위바위보를 통해 오너 결정
+
         while (true) {
             String userChoice = players[0].next();
             String computerChoice = players[1].next();
             if (isDraw(userChoice, computerChoice)) {
-                System.out.println("비겼습니다. 다시 가위바위보를 진행합니다.");
+                System.out.println("무승부, 다시 게임을 진행합니다.");
             } else if (isWin(userChoice, computerChoice)) {
-                System.out.println(players[0].getName() + "이 오너로 결정되었습니다.");
+                System.out.println(players[0].getName() + "이 메인으로 결정되었습니다.");
                 owner = players[0];
                 break;
             } else {
-                System.out.println(players[1].getName() + "이 오너로 결정되었습니다.");
+                System.out.println(players[1].getName() + "이 메인으로 결정되었습니다.");
                 owner = players[1];
                 break;
             }
         }
 
-        // 묵찌빠 게임 진행
+        
         System.out.println("묵찌빠 게임을 시작합니다.");
         while (true) {
             Player challenger = (owner == players[0]) ? players[1] : players[0];
@@ -38,9 +38,9 @@ class Game {
                 System.out.println(owner.getName() + "이(가) 최종 승리했습니다!");
                 break;
             } else if (isWin(ownerChoice, challengerChoice)) {
-                System.out.println(owner.getName() + "이 승리하여 오너 자리를 유지합니다.");
+                System.out.println(owner.getName() + "이 승리하여 메인 자리를 유지합니다.");
             } else {
-                System.out.println(challenger.getName() + "이 승리하여 오너가 변경됩니다.");
+                System.out.println(challenger.getName() + "이 승리하여 메인이 변경됩니다.");
                 owner = challenger;
             }
         }
