@@ -1,4 +1,4 @@
-package week5_homework;
+package openChallenge;
 
 import java.util.Scanner;
 
@@ -20,15 +20,13 @@ class Player {
 }
 
 public class openChallenge {
-    // 생성자
     public openChallenge() {}
 
-    // 전반적인 진행
     public void run() {
         Scanner sc = new Scanner(System.in);
         System.out.print("게임에 참가하는 인원은 몇 명입니까?>> ");
         int users = sc.nextInt();
-        sc.nextLine(); // 개행 문자 제거
+        sc.nextLine();
 
         Player[] players = new Player[users];
 
@@ -38,34 +36,33 @@ public class openChallenge {
             players[i] = new Player(playerName);
         }
 
-        String word = "아버지";  // 게임 시작 단어
+        String word = "아버지";
         System.out.println("시작하는 단어는 " + word + "입니다");
 
-        int currentPlayerIndex = 0;  // 현재 순서를 저장하는 변수
+        int currentPlayerIndex = 0;
         while (true) {
-            Player currentPlayer = players[currentPlayerIndex];  // 현재 차례의 플레이어
+            Player currentPlayer = players[currentPlayerIndex];
             
             System.out.print(currentPlayer.name + ">> ");
             String newWord = sc.next();
 
-            // 입력된 단어가 최소한 1글자 이상인지 확인
+            
             if (newWord.length() == 0) {
                 System.out.println("단어를 입력해야 합니다.");
-                continue;  // 다시 입력받음
+                continue;
             }
 
             currentPlayer.getWordFromUser(newWord);
 
-            // 이전 단어의 마지막 글자와 새 단어의 첫 글자 비교
-            char lastChar = word.charAt(word.length() - 1);  // 이전 단어의 마지막 문자
-            char firstChar = newWord.charAt(0);  // 새 단어의 첫 문자
+
+            char lastChar = word.charAt(word.length() - 1);
+            char firstChar = newWord.charAt(0);
 
             if (!checkSuccess(lastChar, firstChar)) {
                 System.out.println(currentPlayer.name + "이(가) 졌습니다.");
                 break;  // 게임 종료
             }
 
-            // 단어 갱신 및 다음 플레이어로 넘어감
             word = newWord;
             currentPlayerIndex = (currentPlayerIndex + 1) % players.length;
         }
@@ -73,7 +70,7 @@ public class openChallenge {
         sc.close();
     }
 
-    // 첫 글자와 마지막 글자 비교
+
     public boolean checkSuccess(char lastChar, char firstChar) {
         return lastChar == firstChar;
     }
