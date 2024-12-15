@@ -1,9 +1,7 @@
-package week7_homework;
-//상속받은 Point 클래스는 test3에서 확인
+package project;
 class ColorPoint2 extends Point{
 	String color;
 	
-	// 오버로딩 : 같은 이름의 메소드를 인수의 갯수나 데이터 타입을 바꾸어 여러개 만들 수 있음
 	public ColorPoint2() {
 		super(0,0);
 		color = "WHITE";
@@ -32,14 +30,13 @@ class ColorPoint2 extends Point{
 		return str;
 	}
 	
-	// 두 점 사이의 거리는 유클리드 거리 공식 활용
 	public double getDistance(ColorPoint2 criticalPoint){
 		return Math.sqrt(Math.pow(criticalPoint.getX() - this.getX(), 2) + 
 				Math.pow(criticalPoint.getY() - this.getY(), 2));
 	}
 }
 
-public class test4 {
+public class p4 {
 	public static void main(String[] args) {
 		ColorPoint2 zeroPoint = new ColorPoint2();
 		System.out.println(zeroPoint.toString() + "입니다.");
