@@ -1,4 +1,4 @@
-package week7_homework;
+package project;
 
 import java.util.Scanner;
 
@@ -41,7 +41,7 @@ class StringStack implements IStack{
 	}
 }
 
-public class test11 {
+public class p11 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("스택 용량>>");
