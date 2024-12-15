@@ -1,4 +1,4 @@
-package week5_homework;
+package project;
 
 class Account{
 	int balance;
@@ -34,7 +34,7 @@ class Account{
 	}
 }
 
-public class test8 {
+public class p8 {
 	public static void main(String[] args) {
 		Account a = new Account(100);
 		a.deposit(5000);
