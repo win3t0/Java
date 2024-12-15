@@ -48,7 +48,7 @@ class ConcertReservationSystem {
         for (int i = 0; i < seats.length; i++) {
             for (int j = 0; j < seats[i].length; j++) {
                 if (seats[i][j].equals(name)) {
-                    seats[i][j] = "---"; // 예약 취소
+                    seats[i][j] = "---";
                     found = true;
                     System.out.println(name + "님의 예약이 취소되었습니다.");
                     break;
