@@ -1,4 +1,4 @@
-package chapter6;
+package project;
 
 class Student{
 	String name;
@@ -22,7 +22,7 @@ class Student{
 	
 }
 
-public class test1 {
+public class p1 {
 	public static void main(String[] args) {
 		Student a = new Student("황기태", 23);
 		Student b = new Student("황기태", 77);
