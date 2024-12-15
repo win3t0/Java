@@ -1,4 +1,4 @@
-package week5_homework;
+package project;
 
 class Memo{
 	String name, time, content;
@@ -27,7 +27,7 @@ class Memo{
 	}
 }
 
-public class test7 {
+public class p7 {
 	public static void main(String[] args) {
 		Memo a = new Memo("유송연", "10:10", "자바 과제 있음");
 		Memo b = new Memo("박채원", "10:15", "시카고로 어학 연수가요!");
