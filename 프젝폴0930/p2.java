@@ -1,4 +1,4 @@
-package week5_homework;
+package project;
 
 class Cube{
 	private int width, depth, height;
@@ -23,7 +23,7 @@ class Cube{
 	}
 }
 
-public class test2 {
+public class p2 {
 	public static void main(String[] args) {
 		Cube cube = new Cube(1,2,3);
 		System.out.println("큐브의 부피는 " + cube.getVolume());
