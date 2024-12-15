@@ -1,4 +1,4 @@
-package week7_homework;
+package project;
 
 interface Shape{
 	final double PI = 3.14;
@@ -57,7 +57,7 @@ class Rectt implements Shape{
 	}
 }
 
-public class test15 {
+public class p15 {
 	public static void main(String[] args) {
 		Shape [] list = new Shape[3];
 		list[0] = new Circle2(5);
