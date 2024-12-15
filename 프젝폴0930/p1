@@ -1,4 +1,4 @@
-package week5_homework;
+package project;
 class TV {
 	String maker;
 	int price, inch;
