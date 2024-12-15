@@ -1,4 +1,4 @@
-package week7_homework;
+package project;
 
 import java.util.Scanner;
 
@@ -48,7 +48,7 @@ class BinaryArray extends BaseArray{
 	}
 }
 
-public class test9 {
+public class p9 {
 	public static void main(String[] args) {
 		int threshold = 50;
 		BinaryArray bArray = new BinaryArray(10, threshold);
