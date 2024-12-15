@@ -1,9 +1,9 @@
-package chapter6;
+package project;
 
 import java.util.Random;
 import java.util.Scanner;
 
-public class test10 {
+public class p10 {
 	public static void main(String[] args) {
 		String[] arr = new String[] {"happy", "morning", "package", "together"};
 		Random random = new Random();
@@ -12,34 +12,34 @@ public class test10 {
 		while(true) {
 			String question = arr[(int)(Math.random()*arr.length)];
 			
-			 // 문자열을 char 배열로 변환
+
 	        char[] charArray = question.toCharArray();
 
-	        // 무작위로 두 인덱스를 선택
+
 	        int index1 = random.nextInt(question.length());
 	        int index2;
 	        do {
 	            index2 = random.nextInt(question.length());
-	        } while (index1 == index2);  // 두 인덱스가 같으면 다시 선택
+	        } while (index1 == index2);
 
-	        // 두 문자 위치 교환
+
 	        char temp = charArray[index1];
 	        charArray[index1] = charArray[index2];
 	        charArray[index2] = temp;
 
-	        // char 배열을 다시 문자열로 변환
+
 	        String showQuestion =  new String(charArray);
 	        
 			System.out.println(showQuestion);
 			System.out.print(">>");
 			
-			// 시간 세기
+
 			long startTime = System.currentTimeMillis();
 			
 			String answer = sc.next();
 			
 			long endTime = System.currentTimeMillis();
-		    long elapsedTime = endTime - startTime; // 실행 시간 계산
+		    	long elapsedTime = endTime - startTime;
 		    
 			if(answer.equals("그만"))
 				break;
