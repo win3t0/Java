@@ -1,10 +1,10 @@
-package chapter8;
+package project;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
-public class test7 {
+public class p7 {
 	public static void main(String[] args) {
 		File src = new File("c:\\temp\\heart.png");
 		File dest = new File("c:\\temp\\b.png");
