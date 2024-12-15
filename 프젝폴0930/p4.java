@@ -1,6 +1,6 @@
-package week5_homework;
+package project;
 
-public class test4 {
+public class p4 {
 	int arr[] = new int[10];
 	int count = 0;
 	
